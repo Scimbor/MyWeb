@@ -1,8 +1,8 @@
-nav{
+nav {
+    box-shadow: 0px 1px #888888;
     .menu_toggle {
         display: none;
     }
-
     .menu__input {
         position: absolute;
         top: -9999999px;
@@ -12,13 +12,11 @@ nav{
 
 .menu {
     display: flex;
-
     .menu_item {
         flex-grow: 1;
         padding: 15px 0;
         text-align: center;
         background-color: #292929;
-
         .menu__link {
             width: 100%;
             display: block;
@@ -26,7 +24,6 @@ nav{
             color: white;
             font-family: 'Open Sans Condensed', sans-serif;
             transition: color .2s;
-
             &:hover {
                 color: #ffd14b;
             }
@@ -34,44 +31,62 @@ nav{
     }
 }
 
-@media only screen and (max-width: 767px) {    
-    nav{
+@media only screen and (max-width: 767px) {
+    nav {
         background-color: #292929;
-
-        .menu_toggle{
+        .menu_toggle {
             position: relative;
             display: flex;
             justify-content: flex-end;
-            box-shadow: 0px 1px #888888;
+            .menu__labelH {
+                cursor: pointer;
+                height: 2rem;
+                width: 3.6rem;
+                z-index: 2;
+                padding: 10px;
 
-            .menu__labelH{
-                position: relative;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 50px;
-                height: 50px;
-                padding: 9px;
-                color: white;
+                .menu_toggle_bar,
+                .menu_toggle_bar:after,
+                .menu_toggle_bar::before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all 0.5s ease;
+                    background: white;
+                    content: '';
+                    height: 0.4rem;
+                    width: 3rem;
+                }
+                .menu_toggle_bar {
+                    margin-top: 0;
+                    &::after {
+                        margin-top: 0.8rem;
+                    }
+                    &::before {
+                        margin-top: -0.8rem;
+                    }
+                }
+            }
 
-                .menu_line{
-                    display: block;
-                    height: 4px;
-                    width: 100%;
-                    margin: 4px 0;
-                    background-color: white;
+            .menu__labelH.transformMenu{
+                .menu_toggle_bar{ background: transparent; }
+
+                .menu_toggle_bar::after{transform: rotate(45deg);}
+                .menu_toggle_bar::before{transform: rotate(-45deg);}
+
+                .menu_toggle_bar::after, .menu_toggle_bar::before{
+                    background: white;
+                    margin-top: 0;
                 }
             }
         }
 
-        #toogle:checked + .menu {
+        #toogle:checked+.menu {
             transition: 0.2s;
             left: 0;
         }
     }
-
-    .menu{
+    .menu {
         position: relative;
         flex-direction: column;
         left: -100%;
