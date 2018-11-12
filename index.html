@@ -10,34 +10,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="css/main_styles.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
 
 <body>
-    <nav>
-        <div class="menu_toggle">
-            <label class="menu__labelH" for="toogle">
-                <div class="menu_toggle_bar"></div>
-            </label>
+    <div class="container">
+        <div class="row">
+            <nav>
+                <div class="menu_toggle">
+                    <label class="menu__labelH" for="toogle">
+                        <div class="menu_toggle_bar"></div>
+                    </label>
+                </div>
+
+                <input type="checkbox" id="toogle" class="toogle menu__input">
+
+                <ul class="menu">
+                    <li class="menu_item">
+                        <a class="menu__link" href="https://">O mnie</a></li>
+                    <li class="menu_item">
+                        <a class="menu__link" href="https://">Umiejętności</a></li>
+                    <li class="menu_item">
+                        <a class="menu__link" href="https://">Portfolio</a></li>
+                    <li class="menu_item">
+                        <a class="menu__link" href="https://">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
+    </div>
 
-        <input type="checkbox" id="toogle" class="toogle menu__input">
+    <div class="container">
+        <div class="row header">
+            <p class="header_text">Marcin Scimborski</p>
 
-        <ul class="menu">
-            <li class="menu_item">
-                <a class="menu__link" href="https://">O mnie</a></li>
-            <li class="menu_item">
-                <a class="menu__link" href="https://">Umiejętności</a></li>
-            <li class="menu_item">
-                <a class="menu__link" href="https://">Portfolio</a></li>
-            <li class="menu_item">
-                <a class="menu__link" href="https://">Kontakt</a></li>
-        </ul>
-    </nav>
+            <div class="col-md-12 lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
+            <p class="header_text">Junior Front-End Developer</p>
+        </div>
+    </div>
+
+    <div class="container-fluid skills">
+        <div class="row">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills_position">
+                        <img src="./img/technologies/html5.svg" alt="icon-html5">
+                        <img src="./img/technologies/css3.svg" alt="icon-css3">
+                        <img src="./img/technologies/js.svg" alt="icon-javascript">
+                        <img src="./img/technologies/jquery.svg" alt="icon-jquery">
+                        <img src="./img/technologies/bootstrap.svg" alt="icon-bootstrap">
+                </div>
+                <div class="skills_position">
+                        <img src="./img/technologies/sass.svg" alt="icon-sass">
+                        <img src="./img/technologies/ts.svg" alt="icon-typescript">
+                        <img src="./img/technologies/angular.svg" alt="icon-angular">
+                        <img src="./img/technologies/node.svg" alt="icon-nodejs">
+                        <img src="./img/technologies/ionic.svg" alt="icon-ionic">
+                </div>
+                <div class="skills_position">
+                        <img src="./img/technologies/git.svg" alt="icon-git">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%; height:500px"></div>
+    <div style="width:100%; height:500px"></div>
+    <div style="width:100%; height:500px"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="js/animations.js"></script>
 </body>
 

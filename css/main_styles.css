@@ -1,2 +1,6 @@
 body {
-  background-color: #333333; }
+  background-color: #1A1A1A;
+  font-family: 'Open Sans Condensed', sans-serif !important; }
+
+html {
+  overflow-x: hidden; }
